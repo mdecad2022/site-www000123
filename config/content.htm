@@ -44,6 +44,8 @@
 <h2>w10</h2>
 <p><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41023237_nfu_edu_tw/EZJ0K5RpeapCo6D-Oq5BrmUBS9PoO58UDnCsF1_KrTBEjQ"> block.prt程式</a></p>
 <p><a href="https://nfuedu-my.sharepoint.com/:t:/g/personal/41023237_nfu_edu_tw/EaL3TyVwY99Kv_ISMq8JpCAB6rP4rTLR1e59TOm2ag5CTQ">block_ascii.stl</a></p>
+<p>缺考名單</p>
+<p><button id="1 add to 100">缺考名單</button></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -90,7 +92,7 @@ def run1():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/www000123/499d8c40c9bb0e48b019eea8a8a6f1b1/raw/88a54e486bae5ab449c6f20e95e3bfd7ab9ad1d4/w10hw%25E7%25A8%258B%25E5%25BC%258F"
+        url = "https://gist.githubusercontent.com/www000123/499d8c40c9bb0e48b019eea8a8a6f1b1/raw/9385319bc959f7cedf2c98e50aad04bac4499e31/w10hw%25E7%25A8%258B%25E5%25BC%258F(%25E7%25BC%25BA%25E8%2580%2583)"
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -109,10 +111,37 @@ doc['kw_show_console1'].bind('click', Ace1.show_console)
 doc['kw_clear_console1'].bind('click', Ace1.clear_console)
 doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
-run1()
+run1()<p><!-
 </script>
 </p>
-<!-- editor1 開始 -->
+<p><!-- add 1 to 100 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+
+add1to100_url = "https://gist.githubusercontent.com/www000123/499d8c40c9bb0e48b019eea8a8a6f1b1/raw/9385319bc959f7cedf2c98e50aad04bac4499e31/w10hw%25E7%25A8%258B%25E5%25BC%258F(%25E7%25BC%25BA%25E8%2580%2583)"
+
+# 從 gist 取得程式碼
+add_src = open(add1to100_url).read()
+def add(ev):
+    Ace2.editor.setValue(add_src)
+    Ace2.editor.scrollToRow(0)
+    Ace2.editor.gotoLine(0)
+    Ace2.run()
+# id 為 "add1to100" 的按鈕點按時, 執行 add 方法
+doc["add1to100"].bind('click', add)
+</script>
+</p>
+<p><!-- add 1 to 100 結束--></p>
+<p><!-- editor1 開始 --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
@@ -128,12 +157,62 @@ run1()
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
 <div id="brython_div1"></div>
-<!-- editor1 結束 --><hr/>
+<p><!-- editor1 結束 --></p>
+<hr/>
+<p>列出考試結果</p>
+<p><button id="2 add to 100">列出成績</button></p>
+<p><!-- add 2 to 100 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor2", console_id="kw_console2", container_id="kw__container2", storage_id="kw_py_src2" )
+
+add2to100_url = "https://gist.githubusercontent.com/www000123/499d8c40c9bb0e48b019eea8a8a6f1b1/raw/9385319bc959f7cedf2c98e50aad04bac4499e31/w10hw%25E7%25A8%258B%25E5%25BC%258F(%25E7%25BC%25BA%25E8%2580%2583)"
+
+# 從 gist 取得程式碼
+add_src = open(add2to100_url).read()
+def add(ev):
+    Ace2.editor.setValue(add_src)
+    Ace2.editor.scrollToRow(0)
+    Ace2.editor.gotoLine(0)
+    Ace2.run()
+# id 為 "add2to100" 的按鈕點按時, 執行 add 方法
+doc["add1to100"].bind('click', add)
+</script>
+</p>
+<p><!-- add 2 to 100 結束--></p>
+<p><!-- editor2 開始 --></p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor2" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename2" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src2', 'kw_filename2');" type="submit" value="Save"/></form>
+<p><!-- 存擋表單結束 --></p>
+<p></p>
+<p><!-- 執行與清除按鈕開始 --></p>
+<p><button id="kw_run2">Run</button> <button id="kw_show_console2">Output</button> <button id="kw_clear_console2">清除輸出區</button><button id="clear_bd2">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
+<div id="brython_div1"></div>
+<p><!-- editor2 結束 --></p>
+<hr/>
+<p>
 <script src="/static/Cango-24v03-min.js"></script>
 <script src="/static/gearUtils-09.js"></script>
 <script src="/static/SVGpathUtils-6v03-min.js"></script>
 <script src="/static/sylvester.js"></script>
-<script src="/static/PrairieDraw.js"></script><h2>w11</h2>
+<script src="/static/PrairieDraw.js"></script>
+</p><h2>w11</h2>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
