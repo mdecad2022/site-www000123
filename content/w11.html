@@ -142,81 +142,6 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">w10 << <a href='w10.html'>Previous</a> <br /><h1>w11</h1>
-<p>mde.tw</p>
-<!-- <script src="./../cmsimde/static/jquery.js"></script> -->
-<p></p>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-<script src="/get_page/cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
-<script src="/get_page/cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
-<script src="/get_page/w11/tipuesearch_content.js"></script>
-<script src="/get_page/cmsimde/static/tipuesearch/tipuesearch.js"></script>
-<!-- for Wink3 客製化關閉 -->
-<p></p>
-<!--
-        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
-        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
-        -->
-<script>
-/* original tipuesearch
-            $(document).ready(function() {
-                 $('#tipue_search_input').tipuesearch();
-            });
-            */
-            // customed doSearch
-            function doSearch() {
-                $('#tipue_search_input').tipuesearch({
-                    newWindow: true, 
-                    minimumLength: 2,
-                    wholeWords: false, // for search 中文
-                });
-            }
-            $(document).ready(doSearch);
-</script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shCore.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushBash.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushDiff.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushJScript.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushJava.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushPython.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushSql.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushHaxe.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushXml.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushPhp.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushPowerShell.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushLua.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushCpp.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushCss.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushCSharp.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushDart.js" type="text/javascript"></script>
-<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushRust.js" type="text/javascript"></script>
-<script type="text/javascript">
-SyntaxHighlighter.all();
-</script>
-<!-- 暫時不用
-<script src="./../cmsimde/static/fengari-web.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
-<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
--->
-<p></p>
-<!-- for Brython 暫時不用
-<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
-<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
--->
-<div class="container"><nav>
-<div class="site-wrap">
-<div class="site-mobile-menu">
-<div class="site-mobile-menu-header">
-<div class="site-mobile-menu-close mt-3"><br/><span class="icon-close2 js-menu-toggle"></span></div>
-</div>
-</div>
-</div>
-<div id="tipue_search_content">
-<p>
-<script src="/get_page/cmsimde/static/brython.js">
-</script>
-<script src="/get_page/cmsimde/static/brython_stdlib.js"></script>
-</p>
 <!-- for ggame -->
 <p>
 <script src="/get_page/cmsimde/static/jquery-3.3.1.min.js"></script>
@@ -266,13 +191,13 @@ function doSave(storage_id, filename){
 }
 </script>
 </p>
-<p><button id="add1to100">add 1 to 100</button></p>
+<p><button id="p261">p261</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <p><!-- 存擋表單開始 --></p>
-<form></form>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
 <p><!-- 存擋表單結束 --></p>
 <p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
@@ -280,53 +205,81 @@ function doSave(storage_id, filename){
 <p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
-<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1" style="width: 300px; height: 300px;"></textarea></div>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
 <p><!-- 這裡的畫布 id 為 brython_div --></p>
 <div id="brython_div"></div>
 <!-- graphics-column is for ggame -->
 <div class="col-md-0" height="1" id="graphics-column" width="1"></div>
-<a href="https://colorlib.com" target="_blank"></a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-<div class="container">
-<div class="row pt-3 mx-auto"></div>
-</div>
-<!-- for footer --></nav></div>
-<!-- for site wrap -->
-<p></p>
-<!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
-<script src="/get_page/cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
-<script src="/get_page/cmsimde/static/chimper/js/jquery-ui.js"></script>
-<script src="/get_page/cmsimde/static/chimper/js/popper.min.js"></script>
-<script src="/get_page/cmsimde/static/chimper/js/bootstrap.min.js"></script>
-<script src="/get_page/cmsimde/static/chimper/js/owl.carousel.min.js"></script>
-<script src="/get_page/cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
-<script src="/get_page/cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
-<script src="/get_page/cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
-<script src="/get_page/cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
-<script src="/get_page/cmsimde/static/chimper/js/aos.js"></script>
-<!--
-            <script src="../cmsimde/static/chimper/js/typed.js"></script>
-                    <script>
-                    var typed = new Typed('.typed-words', {
-                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
-                    typeSpeed: 80,
-                    backSpeed: 80,
-                    backDelay: 4000,
-                    startDelay: 1000,
-                    loop: true,
-                    showCursor: true
-                    });
-                    </script>
-            -->
-<script src="/get_page/cmsimde/static/chimper/js/main.js"></script>
-<!-- 啟用 LaTeX equations 編輯 -->
-<p></p>
-<!-- <script>
-  MathJax = {
-    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
-  };
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>--><br />w10 << <a href='w10.html'>Previous</a> </div>
+<p><!-- ######################  editor1 結束 ###################### --></p>
+<p><!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    # 注意這裡清除的畫布 id 為 brython_div
+    bd = doc["brython_div"]
+    bd.clear()
+Ace1 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run1():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src"]
+    except:
+        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace1.editor.setValue(prog)
+    Ace1.editor.scrollToRow(0)
+    Ace1.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace1.run()
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run1'].bind('click', Ace1.run)
+doc['kw_show_console1'].bind('click', Ace1.show_console)
+doc['kw_clear_console1'].bind('click', Ace1.clear_console)
+doc['clear_bd1'].bind('click', clear_bd1)
+# 呼叫函式執行
+run1()
+</script>
+<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 --></p>
+<p><!-- add 1 to 100 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+
+class button2:
+    def __init__(self, url):
+        self.url = url
+
+    # 記得加入 event 輸入變數
+    def do(self,ev):
+        Ace2.editor.setValue(open(self.url).read())
+        Ace2.editor.scrollToRow(0)
+        Ace2.editor.gotoLine(0)
+        Ace2.run()
+
+p216_url = "https://gist.githubusercontent.com/www000123/0b9d14ed70905279fcabd1fabcf7ab12/raw/03cb21e58f82323132e676368128133dfe298ba6/w11hw%25E7%25A8%258B%25E5%25BC%258F"
+add1to100 = button2(add1to100_url)
+doc["add1to100"].bind('click', add1to100.do)
+</script>
+</p><br />w10 << <a href='w10.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
