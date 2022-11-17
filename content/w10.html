@@ -191,7 +191,7 @@ def run1():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/www000123/499d8c40c9bb0e48b019eea8a8a6f1b1/raw/9385319bc959f7cedf2c98e50aad04bac4499e31/w10hw%25E7%25A8%258B%25E5%25BC%258F(%25E7%25BC%25BA%25E8%2580%2583)"
+        url = "https://gist.githubusercontent.com/www000123/423bc31cc2f259bb7a55ddfbb631a2f8/raw/e6dac79665189e0f363e0c5711081ab797a618cb/w10hw%25E7%25A8%258B%25E5%25BC%258F(%25E5%2588%2597%25E5%2587%25BA)"
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -210,10 +210,10 @@ doc['kw_show_console1'].bind('click', Ace1.show_console)
 doc['kw_clear_console1'].bind('click', Ace1.clear_console)
 doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
-run1()<p><!-
+run1()
 </script>
 </p>
-<p><!-- editor1 開始 --></p>
+<!-- editor1 開始 -->
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
@@ -229,8 +229,7 @@ run1()<p><!-
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
 <div id="brython_div1"></div>
-<p><!-- editor1 結束 --></p>
-<hr/>
+<!-- editor1 結束 --><hr/>
 <script src="./../cmsimde/static/Cango-24v03-min.js"></script>
 <script src="./../cmsimde/static/gearUtils-09.js"></script>
 <script src="./../cmsimde/static/SVGpathUtils-6v03-min.js"></script>
