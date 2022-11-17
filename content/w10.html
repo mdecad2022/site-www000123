@@ -187,10 +187,7 @@ def clear_bd1(ev):
 Ace1 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
 # 從 gist 取出程式碼後, 放入 editor 作為 default 程式
 def run1():
-    # 利用 get 取下 src 變數值
-    try:
-        url = doc.query["src"]
-    except:
+    
         url = "https://gist.githubusercontent.com/www000123/423bc31cc2f259bb7a55ddfbb631a2f8/raw/e6dac79665189e0f363e0c5711081ab797a618cb/w10hw%25E7%25A8%258B%25E5%25BC%258F(%25E5%2588%2597%25E5%2587%25BA)"
     prog = open(url).read()
 
