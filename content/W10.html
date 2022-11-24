@@ -229,7 +229,7 @@ add1to100_url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a7
 # 從 gist 取得程式碼
 def __init__(self, url):
         self.url = url
-def do(self,ev):
+def add(self,ev):
         Ace2.editor.setValue(open(self.url).read())
         Ace2.editor.scrollToRow(0)
         Ace2.editor.gotoLine(0)
