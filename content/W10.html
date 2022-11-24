@@ -142,7 +142,7 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">HW << <a href='HW.html'>Previous</a> <br /><h1>W10</h1>
-<p><button id="add1to100">1 add to 100</button></p>
+<p><button id="add1to100">1 add to 100</button><button id="p216">p216</button></p>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -234,6 +234,11 @@ def add(ev):
     Ace2.editor.gotoLine(0)
     Ace2.run()
 doc["add1to100"].bind('click', add)
+################################# p261 start 
+p261_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/980606effcd29635307d6474718cd4a7ef016747/p261.py"
+p261 = button2(p261_url)
+doc["p261"].bind('click', p261.do)
+################################## p261 end
 </script>
 </p>
 <p><!-- add 1 to 100 結束--></p>
