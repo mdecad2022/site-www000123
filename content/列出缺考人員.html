@@ -227,13 +227,12 @@ Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id
 add1to100_url = "https://gist.githubusercontent.com/www000123/499d8c40c9bb0e48b019eea8a8a6f1b1/raw/6e56767c0ac5b827a8980f5ad4bc82641fe94f46/w10hw%25E7%25A8%258B%25E5%25BC%258F(%25E7%25BC%25BA%25E8%2580%2583)"
 
 # 從 gist 取得程式碼
-def __init__(self, url):
-        self.url = url
-def add(self,ev):
-        Ace2.editor.setValue(open(self.url).read())
-        Ace2.editor.scrollToRow(0)
-        Ace2.editor.gotoLine(0)
-        Ace2.run()
+add_src = open(add1to100_url).read()
+def add(ev):
+    Ace2.editor.setValue(add_src)
+    Ace2.editor.scrollToRow(0)
+    Ace2.editor.gotoLine(0)
+    Ace2.run()
 doc["add1to100"].bind('click', add)
 </script>
 </p>
